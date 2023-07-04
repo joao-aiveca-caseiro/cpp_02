@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:01:30 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/03 19:17:23 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:04:30 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	main(void)
 	a = Fixed( 1234.4321f );
 	
 	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	// std::cout << "b is " << b << std::endl;
+	// std::cout << "c is " << c << std::endl;
+	// std::cout << "d is " << d << std::endl;
+	// std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	// std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	// std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	// std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	return (0);
 }

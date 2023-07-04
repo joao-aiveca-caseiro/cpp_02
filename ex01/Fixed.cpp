@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 16:30:22 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/03 19:02:14 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/04 15:01:59 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,16 @@ Fixed::Fixed(const Fixed &fixed)
 {
 	std::cout << "Copy constructor called." << std::endl;
 	this->_value = fixed.getRawBits();
+}
+
+Fixed::Fixed(const int num)
+{
+	(void)num;
+}
+
+Fixed::Fixed(const float num)
+{
+	this->_value = num * (1 << this->fractional);
 }
 
 Fixed::~Fixed()
@@ -46,4 +56,15 @@ int Fixed::getRawBits(void) const
 void	Fixed::setRawBits(int const raw)
 {
 	this->_value = raw;
+}
+
+float	Fixed::toFloat(void) const
+{
+	return (this->_value / (1 << this->fractional));
+}
+
+std::ostream &operator<<(std::ostream &os, Fixed const &fixed)
+{
+	os << fixed.toFloat();
+	return (os);
 }
