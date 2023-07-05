@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/30 14:37:39 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/05 14:04:19 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/05 17:00:53 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,30 @@ class Fixed
 		~Fixed();
 
 		Fixed 	&operator=(const Fixed &fixed);
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
-		float	toFloat(void) const;
-		int		toInt(void) const;
+		
+		Fixed	operator+(const Fixed &fixed);
+		Fixed	operator-(const Fixed &fixed);
+		Fixed	operator*(const Fixed &fixed);
+		Fixed	operator/(const Fixed &fixed);
+		Fixed	&operator++();
+		Fixed	operator++(int);
+		Fixed	&operator--();
+		Fixed	operator--(int);
+		bool	operator>(const Fixed &fixed);
+		bool	operator<(const Fixed &fixed);
+		bool	operator>=(const Fixed &fixed);
+		bool	operator<=(const Fixed &fixed);
+		bool	operator==(const Fixed &fixed);
+		bool	operator!=(const Fixed &fixed);
+		
+		int				getRawBits(void) const;
+		void			setRawBits(int const raw);
+		float			toFloat(void) const;
+		int				toInt(void) const;
+		static Fixed	&min(Fixed &fixedA, Fixed &fixedB);
+		static Fixed	&min(const Fixed &fixedA, const Fixed &fixedB);
+		static Fixed	&max(Fixed &fixedA, Fixed &fixedB);
+		static Fixed	&max(const Fixed &fixedA, const Fixed &fixedB);
 
 	private:
 
