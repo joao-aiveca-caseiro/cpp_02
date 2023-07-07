@@ -1,6 +1,8 @@
 SRCS		= main.cpp\
-				Fixed.cpp
-INCS		= Fixed.hpp
+				Fixed.cpp\
+				Point.cpp
+INCS		= Fixed.hpp\
+				Point.hpp
 OBJS		= ${SRCS:.cpp=.o}
 NAME		= test
 CXX			= c++

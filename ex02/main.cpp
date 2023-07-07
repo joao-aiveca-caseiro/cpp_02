@@ -6,7 +6,7 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 18:01:30 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/07 01:35:27 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/07 16:49:35 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int main(void)
 // 	Fixed const d( Fixed( 5.05f ) / Fixed( 2 ) );
 
 // 	Fixed a;
+// 	Fixed e;
 
 // 	std::cout << b << std::endl;
 // 	std::cout << c << std::endl;
@@ -45,5 +46,12 @@ int main(void)
 //  	std::cout << a-- << std::endl;	
 //  	std::cout << a << std::endl;
 
-// 	std::cout << Fixed::min( b, c ) << std::endl;		
+// 	std::cout << Fixed::min( b, c ) << std::endl;
+	
+// 	if (a != c)
+// 		std::cout << "Fixed a and Fixed c have different values" << std::endl;
+	
+// 	e = a;
+// 	if (e == a)
+// 		std::cout << "Fixed e and Fixed a have equal values" << std::endl;	
 // }
